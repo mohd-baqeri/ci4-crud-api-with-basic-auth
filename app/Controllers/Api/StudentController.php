@@ -46,7 +46,7 @@ class StudentController extends ResourceController
         if (
             !$this->validate($rules)
         ) {
-            return $this->respond(
+            return $this->fail(
                 $this->validator->getErrors()
             );
         }
